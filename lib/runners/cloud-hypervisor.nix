@@ -69,7 +69,7 @@ let
   # Attrs representing CHV mem options
   memOps = opsMapped ({
     size = "${toString mem}M";
-    mergeable = "on";
+    mergeable = "off";
     # Shared memory is required for usage with virtiofsd but it
     # prevents Kernel Same-page Merging.
     shared = if useVirtiofs || graphics.enable then "on" else "off";
